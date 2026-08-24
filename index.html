@@ -46,18 +46,34 @@
   </script>
 
   <link rel="stylesheet" href="style.css">
+  <style>
+    .emm-title {
+      font-size: clamp(2.6rem, 5.2vw, 5.25rem);
+      line-height: 0.92;
+      letter-spacing: -0.045em;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+    }
+
+    @media (max-width: 760px) {
+      .emm-title {
+        font-size: clamp(2.4rem, 13vw, 4.8rem);
+      }
+    }
+  </style>
 </head>
 <body>
   <main class="catalogue">
     <header class="site-header">
-      <p class="artist">Thomas Bizien<br>CATALOGUE<br>2019—</p>
+      <p class="artist">Thomas Bizien<br>INDEX. ŒUVRES. CONTACT.<br>2019—</p>
     </header>
 
     <section class="project project-emm">
       <div class="project-meta"><p>GRP-005</p><p>2026</p></div>
       <div class="project-grid">
         <div class="project-copy">
-          <h2>Electronique mélancolique musique</h2>
+          <h2 class="emm-title">Electronique<br>mélancolique<br>musique</h2>
           <p class="project-type">Album</p>
           <div class="description">
             <p>J’ai composé <em>Electronique mélancolique musique</em> comme un album de bribes.</p>
