@@ -73,8 +73,11 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Correction typographique du titre long -->
+  <!-- Styles spécifiques -->
   <style>
+
+    /* Titre Electronique mélancolique musique */
+
     .emm-title {
       font-size: 2.55rem;
       line-height: 0.95;
@@ -89,27 +92,94 @@
       white-space: nowrap;
     }
 
+
+    /* Inscription e-mail */
+
+    .newsletter {
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+      max-width: 680px;
+    }
+
+    .newsletter p {
+      margin: 0 0 1rem 0;
+    }
+
+    .newsletter form {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      border-bottom: 1px solid currentColor;
+      padding-bottom: 0.35rem;
+    }
+
+    .newsletter input[type="email"] {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      outline: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      padding: 0.4rem 0;
+    }
+
+    .newsletter input[type="email"]::placeholder {
+      color: inherit;
+      opacity: 0.45;
+    }
+
+    .newsletter button {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 0.4rem 0;
+    }
+
+    .newsletter button:hover {
+      opacity: 0.5;
+    }
+
+
+    /* Mobile */
+
     @media (max-width: 760px) {
+
       .emm-title {
         font-size: 2.2rem;
         line-height: 0.97;
       }
+
+      .newsletter form {
+        gap: 0.75rem;
+      }
+
     }
+
   </style>
 
 </head>
+
 
 <body>
 
   <main class="catalogue">
 
+
+    <!-- HEADER -->
+
     <header class="site-header">
+
       <p class="artist">
         Thomas Bizien<br>
         INDEX. ŒUVRES. CONTACT.<br>
         2019 —
       </p>
+
     </header>
+
 
 
     <!-- ELECTRONIQUE MELANCOLIQUE MUSIQUE -->
@@ -164,17 +234,23 @@
             </p>
 
           </div>
+
         </div>
 
+
         <figure class="project-visual square">
+
           <img
             src="assets/emm.jpg"
             alt="Visuel de l’album Electronique mélancolique musique"
           >
+
         </figure>
 
       </div>
+
     </section>
+
 
 
     <!-- MONDE MORTEL -->
@@ -224,17 +300,23 @@
             </p>
 
           </div>
+
         </div>
 
+
         <figure class="project-visual portrait">
+
           <img
             src="assets/monde-mortel.png"
             alt="Couverture de Monde mortel, mortels humains"
           >
+
         </figure>
 
       </div>
+
     </section>
+
 
 
     <!-- AUSTRALOPUNKTECH -->
@@ -271,17 +353,23 @@
             </p>
 
           </div>
+
         </div>
 
+
         <figure class="project-visual square">
+
           <img
             src="assets/australopunktech.jpg"
             alt="Visuel de l’EP Australopunktech"
           >
+
         </figure>
 
       </div>
+
     </section>
+
 
 
     <!-- MENAGE SAMEDI -->
@@ -307,23 +395,30 @@
               Ménage samedi a été publié en novembre 2022.
               Je l'ai composé et produit dans mon studio parisien.
               <br><br>
+
               J’ai cherché une écriture électronique dépouillée,
               où des nappes de synthétiseurs et une guitare réverbérée
               puissent accompagner mon chant en français.
             </p>
 
           </div>
+
         </div>
 
+
         <figure class="project-visual square">
+
           <img
             src="assets/menage-samedi.jpg"
             alt="Visuel de l’EP Ménage samedi"
           >
+
         </figure>
 
       </div>
+
     </section>
+
 
 
     <!-- PI-POLAIRE -->
@@ -366,27 +461,78 @@
             </p>
 
           </div>
+
         </div>
 
+
         <figure class="project-visual portrait">
+
           <img
             src="assets/pi-polaire.jpg"
             alt="Couverture du roman Pi-Polaire"
           >
+
         </figure>
 
       </div>
+
     </section>
+
 
 
     <!-- FOOTER -->
 
     <footer class="site-footer">
+
       <p>Thomas Bizien</p>
-      <p class="footer-contact">thomas@grpoint.biz</p>
+
+      <p class="footer-contact">
+        thomas@grpoint.biz
+      </p>
+
     </footer>
+
+
+
+    <!-- INSCRIPTION E-MAIL -->
+
+    <section class="newsletter">
+
+      <p>
+        Inscrivez-vous pour recevoir de mes nouvelles directement par e-mail.
+      </p>
+
+      <form
+        action="https://formspree.io/f/mqpkzeoq"
+        method="POST"
+      >
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nouvelle inscription depuis thomasbizien.fr"
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Votre adresse e-mail"
+          aria-label="Votre adresse e-mail"
+          autocomplete="email"
+          required
+        >
+
+        <button type="submit">
+          Valider
+        </button>
+
+      </form>
+
+    </section>
+
 
   </main>
 
 </body>
+
 </html>
